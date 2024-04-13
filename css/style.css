@@ -203,7 +203,7 @@ nav h2{
     padding: 0px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    
+    overflow-y: hidden;
 }
 
 .tarjetas-servicios h3,.tarjetas-productos h3{
