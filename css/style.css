@@ -37,6 +37,11 @@ header{
 #header-index{
     position: fixed !important;
 }
+@media screen and (max-width:640px) {
+    #header-index{
+        position: sticky !important;
+    }
+}
 nav{
     font-family: "Sixtyfour", sans-serif;
     font-style: normal;
