@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Micro+5&family=Sixtyfour&display=swap");
 /*? RESET */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
@@ -40,8 +40,13 @@ body {
       align-items: center;
       top: 0px;
       width: 100%; }
-      body header nav ul li {
+      body header nav div ul li {
         padding: 15px; }
+        body header nav div ul li a {
+          transition: 0.4s !important; }
+          body header nav div ul li a:hover {
+            color: #44fdfa !important;
+            -webkit-text-stroke-color: rgba(0, 0, 0, 0.6); }
       body header nav h2 {
         font-size: 20px;
         padding: 0;
@@ -100,7 +105,7 @@ body {
         background-color: #52d2d2;
         border-radius: 50px;
         scale: 1.1;
-        box-shadow: 0 0 5px black; }
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 3px 3px; }
     body main .titulo h1 {
       font-size: 5vh;
       text-align: center;
@@ -205,7 +210,7 @@ body {
       border: 2px solid rgba(124, 249, 236, 0.678);
       border-radius: 50px;
       margin: 1px 5px;
-      box-shadow: 0 0 5px 2px #73f4f2; }
+      box-shadow: 0 0 5px 2px #84f4f2; }
     @media screen and (max-width: 600px) {
       body footer .footer-logo {
         width: 60px; } }

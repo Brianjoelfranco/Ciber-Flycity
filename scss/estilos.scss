@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Sixtyfour&display=swap');
-//! Variables
+
+//? Variables
 $color-bg-transparente:rgba(237, 250, 249, 0.224);
 $size-a:15px;
-//! Listas
+
+//? Listas
 $box-shadow-2:rgba(0, 0, 0, 0.6) 0px 0px 3px 3px,
 0 0 5px 2px rgb(115, 244, 242);
-//!Operaciones
+
+//?Operaciones
 $ancho:16px;
-//!Mapas
+
+//?Mapas
 $margin-padding:(
     marg-0: 0px,
     padng-0: 0px
 );
-//!Extends --> Aplicados del renglon 160 para abajo
-//!Mixins ---> Aplicados en el renglon 65
+//?Extends --> Aplicados del renglon 166 para abajo
+//?Mixins ---> Aplicados en el renglon 69
 @mixin flex($flex, $justify,$align){
     display: $flex;
     justify-content: $justify;
@@ -65,8 +69,18 @@ body{
             @include flex(flex,space-between,center);
             top: 0px;
             width: 100%;
-            ul li{
-                padding: 15px;
+            div{
+                ul{
+                    li{
+                    padding: 15px;
+                    a{transition: 0.4s !important;
+                        &:hover{
+                        color: #44fdfa !important;
+                        -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);        
+                        }
+                    }
+                    }
+                }
             }
             h2{
                 font-size: 20px;
