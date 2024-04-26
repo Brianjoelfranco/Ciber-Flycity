@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Sixtyfour&display=swap');
+//! Variables
+$color-bg-transparente:rgba(237, 250, 249, 0.224);
+$size-a:15px;
+//! Listas
+$box-shadow-2:rgba(0, 0, 0, 0.6) 0px 0px 3px 3px,
+0 0 5px 2px rgb(115, 244, 242);
+//!Operaciones
+$ancho:16px;
+//!Mapas
+$margin-padding:(
+    marg-0: 0px,
+    padng-0: 0px
+);
+//!Extends --> Aplicados del renglon 160 para abajo
+//!Mixins ---> Aplicados en el renglon 65
+@mixin flex($flex, $justify,$align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
 
 /*? RESET */
 *{
-    margin: 0;
-    padding: 0;
+    margin: map-get($margin-padding , marg-0 );
+    padding: map-get($margin-padding , padng-0);
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -15,7 +35,7 @@ body{
     overflow-x: hidden;
     /*? SCROLL */
     &::-webkit-scrollbar {
-        width: 8px;              
+        width: $ancho - 8;              
     }
     &::-webkit-scrollbar-track {
         background: rgba(0, 0, 0, 0.9);       
@@ -42,9 +62,7 @@ body{
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);
             background-color: rgba(255, 236, 236, 0.7);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(flex,space-between,center);
             top: 0px;
             width: 100%;
             ul li{
@@ -82,7 +100,7 @@ body{
                 border: 2px solid rgba(124, 249, 236, 0.678);
                 border-radius: 50px;
                 margin: 1px 5px;
-                box-shadow: 0 0 5px 2px rgb(115, 244, 242);
+                box-shadow: nth($box-shadow-2,2);
             }
         }
     }
@@ -128,7 +146,7 @@ body{
                         background-color: #52d2d2;
                     border-radius: 50px;
                     scale: 1.1;
-                    box-shadow: 0 0 5px black;
+                    box-shadow: nth($box-shadow-2,1);
                     }
                     }
                 h1{
@@ -289,7 +307,7 @@ body{
             border: 2px solid rgba(124, 249, 236, 0.678);
             border-radius: 50px;
             margin: 1px 5px;
-            box-shadow: 0 0 5px 2px rgb(115, 244, 242);
+            box-shadow: 0 0 5px 2px rgb(132, 244, 242);
         }
         @media screen and (max-width:600px) {
             .footer-logo{
@@ -453,7 +471,7 @@ body{
                     display: flex;
                     flex-direction: row;
                     div{
-                        background-color: rgba(237, 250, 249, 0.224);
+                        background-color: $color-bg-transparente;
                         padding-bottom: 5px;
                         overflow: hidden;
                         box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 3px 3px;
@@ -463,13 +481,13 @@ body{
             }
             .grid-tarjetas-3{
                     margin-top: 3px;
-                    background-color: rgba(237, 250, 249, 0.224);
+                    background-color:$color-bg-transparente;
                     grid-area: puntos;
                     overflow: hidden;
                     box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 3px 3px;
             }
             .grid-tarjetas-4{
-                background-color: rgba(237, 250, 249, 0.224);
+                background-color:$color-bg-transparente;
                 grid-area: torneo;
                 overflow: hidden;
                 box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 3px 3px;
