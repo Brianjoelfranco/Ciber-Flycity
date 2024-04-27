@@ -73,12 +73,12 @@ body{
                 ul{
                     li{
                     padding: 15px;
-                    a{transition: 0.4s !important;
-                        &:hover{
-                        color: #44fdfa !important;
-                        -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);        
+                        a{transition: 0.4s !important;
+                            &:hover{
+                            color: #44fdfa !important;
+                            -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);        
+                            }
                         }
-                    }
                     }
                 }
             }
@@ -109,12 +109,14 @@ body{
                 padding: 0;
                 font-size: 20px;
             }
-            a img{
-                width: 50px;
-                border: 2px solid rgba(124, 249, 236, 0.678);
-                border-radius: 50px;
-                margin: 1px 5px;
-                box-shadow: nth($box-shadow-2,2);
+            a{
+                img{
+                    width: 50px;
+                    border: 2px solid rgba(124, 249, 236, 0.678);
+                    border-radius: 50px;
+                    margin: 1px 5px;
+                    box-shadow: nth($box-shadow-2,2);
+                }
             }
         }
     }
