@@ -379,3 +379,81 @@ body {
   @media screen and (max-width: 800px) {
     body .pag-servicios .grid-tarjetas-5 {
       display: none; } }
+
+.proximamente {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/1682336188585.jpg);
+  overflow: hidden; }
+  .proximamente h1 {
+    position: absolute;
+    color: white;
+    top: 30px;
+    text-shadow: aqua 3px 3px 3px; }
+  .proximamente a {
+    position: absolute;
+    bottom: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.7s; }
+    .proximamente a:hover {
+      color: aqua;
+      scale: 1.1;
+      text-shadow: 0 0 1em white; }
+  .proximamente .container-proximamente {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative; }
+    .proximamente .container-proximamente .sol {
+      position: absolute;
+      top: 15em;
+      left: 15em;
+      width: 10em;
+      height: 10em;
+      background: radial-gradient(yellow, #ff5900);
+      border-radius: 50%;
+      box-shadow: 0 0 3em white; }
+    .proximamente .container-proximamente .tierra, .proximamente .container-proximamente .luna {
+      position: absolute;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+      border-width: 0.1em 0.1em 0 0;
+      border-radius: 50%; }
+      .proximamente .container-proximamente .tierra::before, .proximamente .container-proximamente .luna::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%; }
+  .proximamente .tierra {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbita 36.5s linear infinite; }
+    .proximamente .tierra::before {
+      top: 2.0em;
+      right: 2.8em;
+      width: 4em;
+      height: 4em;
+      background-image: url(../img/planet-earth.gif);
+      background-size: cover; }
+    .proximamente .tierra .luna {
+      top: 0;
+      right: 0;
+      width: 8em;
+      height: 8em;
+      animation: orbita 2.7s linear infinite; }
+      .proximamente .tierra .luna::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: silver; }
+
+@keyframes orbita {
+  to {
+    transform: rotate(360deg); } }
