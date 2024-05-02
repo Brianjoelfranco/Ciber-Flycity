@@ -203,8 +203,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
-    overflow-x: hidden;
-    margin-top: 5px; }
+    overflow-x: hidden; }
     body footer .footer-logo {
       width: 80px;
       border: 2px solid rgba(124, 249, 236, 0.678);
