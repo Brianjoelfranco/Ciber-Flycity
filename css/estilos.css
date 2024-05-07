@@ -122,7 +122,10 @@ body {
     color: #fff;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 1px;
-    background: rgba(0, 0, 0, 0.3); }
+    background: rgba(0, 0, 0, 0.3);
+    animation: aparecer linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%; }
   body main .tarjetas-servicios, body main .tarjetas-productos {
     display: flex;
     align-items: center;
@@ -456,3 +459,11 @@ body {
 @keyframes orbita {
   to {
     transform: rotate(360deg); } }
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
